@@ -79,6 +79,9 @@ def create_clip_model(
     with open(config_path, "r") as f:
         config = yaml.load(f, Loader=yaml.SafeLoader)
 
+    print(config_path)
+    print(config)
+
     text_encoder = TextEncoder(
         n_bpe_vocab=config["n_vocab"],
         max_text_len=config["max_text_len"],
